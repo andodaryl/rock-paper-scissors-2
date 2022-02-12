@@ -50,10 +50,12 @@ export default (function() {
   const currentPoints = new Data()
 
   // Points logic
+  // Check if max points reached
+  const isGameStillOn = () => currentPoints.PLAYER <= MAX_WIN || currentPoints.AI <= MAX_WIN
   // Increase player points until max win
-  const playerWin = () => currentPoints.PLAYER < MAX_WIN ? ++currentPoints.PLAYER : 'MAX REACHED' 
+  const playerWin = () =>  isGameStillOn() ? ++currentPoints.PLAYER : 'MAX REACHED' 
   // Increase ai points until max win
-  const playerLose = () => currentPoints.AI < MAX_WIN ? ++currentPoints.AI : 'MAX REACHED'
+  const playerLose = () =>  isGameStillOn() ? ++currentPoints.AI : 'MAX REACHED'
 
   // Read only data
   const getCurrentPoints = () => ({PLAYER: currentPoints.PLAYER, AI: currentPoints.AI})
