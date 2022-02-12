@@ -4,7 +4,7 @@
 
 // Export IIFE
 export default (function() {
-  const updatePointsDisplay = (title, node) => (currentPoints) => {
+  const bindPointsDisplayBehaviour = (title, node) => (currentPoints) => {
     // Safe data
     const safePoints = currentPoints || {}
     const PLAYER = safePoints.PLAYER || 0
@@ -15,6 +15,6 @@ export default (function() {
   }
   // API
   return {
-    updatePointsDisplay
+    bindPointsDisplayBehaviour
   }
 })()
