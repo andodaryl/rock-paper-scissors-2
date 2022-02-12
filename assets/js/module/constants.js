@@ -2,6 +2,8 @@
 
 // Export object
 export default {
+  PLAYER:'PLAYER',
+  AI:'AI',
   DEV_MODE: true,
   ROCK: 'ROCK',
   PAPER: 'PAPER',
