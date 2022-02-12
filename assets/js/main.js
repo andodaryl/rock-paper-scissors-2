@@ -1,8 +1,12 @@
 // Module in which component behaviours are bound to DOM elements + other behaviours
  
 // Import dependencies
-import {bindInputBehaviour} from "./components/input.js";
-import {bindPointsDisplayBehaviour} from "./module/points.js";
+import inputJS from "./components/input.js";
+import pointsdisplayJS from "./components/pointsdisplay.js";
+
+// Get imports
+const {bindInputBehaviour} = inputJS
+const {bindPointsDisplayBehaviour} = pointsdisplayJS
 
 // DOM Elements
 const title = document.getElementsByTagName('title')[0]

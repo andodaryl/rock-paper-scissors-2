@@ -1,10 +1,13 @@
 // Module for points display component
 
 // Import dependencies
-import {MAX_WIN} from "../module/constants.js"
+import constantsJS from "../module/constants.js"
 
 // Export IIFE
 export default (function() {
+  // Get exports
+  const {MAX_WIN} = constantsJS
+
   const bindPointsDisplayBehaviour = (title, node) => (currentPoints) => {
     // Safe data
     const safePoints = currentPoints || {}
@@ -15,7 +18,7 @@ export default (function() {
       // Celebrate player win
       title.innerText = `YOU WIN - Rock Paper Scissors`
       node.innerText = `YOU WIN`
-    } else if (PLAYER >= MAX_WIN) {
+    } else if (AI >= MAX_WIN) {
       // Celebrate ai win
       title.innerText = `AI WINS - Rock Paper Scissors`
       node.innerText = `AI WINS`

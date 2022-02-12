@@ -1,10 +1,12 @@
 // Module to keep track of points
 
 // Import dependencies
-import {DEV_MODE, VERSUS, WIN, LOSE, MAX_WIN} from "./constants.js"
+import constantsJS from "./constants.js"
 
 // Export IIFE
 export default (function() {
+  // Get exports
+  const {DEV_MODE, VERSUS, WIN, LOSE, TIE, MAX_WIN} = constantsJS
 
   // Data Integrity Check
   const isPoints = input => !!parseInt(input) // Check if int & convert truthy to boolean
@@ -54,16 +56,18 @@ export default (function() {
   const playerLose = () => currentPoints.AI < MAX_WIN ? ++currentPoints.AI : 'MAX REACHED'
 
   // Read only data
-  const getCurrentPoints = () => ({...currentPoints})
+  const getCurrentPoints = () => ({PLAYER: currentPoints.PLAYER, AI: currentPoints.AI})
 
   // Check if player choice is sucessful
   const isWinningChoice = (PLAYER, AI) => {
-    result = VERSUS[PLAYER][AI]
+    const result = VERSUS[PLAYER][AI]
     switch(result) {
       case WIN:
         return true
       case LOSE:
         return false
+      case TIE:
+        return TIE
       default:
         if (DEV_MODE) console.error('Invalid input') // Error check
     }

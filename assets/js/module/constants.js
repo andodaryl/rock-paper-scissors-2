@@ -9,9 +9,10 @@ export default {
   MAX_WIN: 3,
   WIN: 'WIN',
   LOSE: 'LOSE',
+  TIE: 'TIE',
   VERSUS: {
-    ROCK: {SCISSORS: 'WIN'},
-    SCISSORS: {PAPER: 'WIN'},
-    PAPER: {ROCK: 'WIN'}
+    ROCK: {SCISSORS: 'WIN', PAPER: 'LOSE', ROCK: 'TIE'},
+    SCISSORS: {PAPER: 'WIN', ROCK: 'LOSE', SCISSORS: 'TIE'},
+    PAPER: {ROCK: 'WIN', SCISSORS: 'LOSE', PAPER: 'TIE'}
   }
 }

@@ -1,33 +1,37 @@
 // Module for behaviour for input component
 
 // Import dependencies
-import {DEV_MODE} from "../module/constants.js"
-import {getAiChoice} from "../module/ai.js"
-import {playerWin, playerLose, isWinningChoice, getCurrentPoints,} from "../module/points.js"
+import constantsJS from "../module/constants.js"
+import aiJS from "../module/ai.js"
+import pointsJS from "../module/points.js"
 
 // Export IIFE
 export default (function() {
-  
+    // Get exports
+    const {DEV_MODE, ROCK, PAPER, SCISSORS} = constantsJS
+    const {getAiChoice} = aiJS
+    const {playerWin, playerLose, isWinningChoice, getCurrentPoints} = pointsJS
+
+    // Main Behaviors
     const bindInputBehaviour = inputContainer => updatePointsDisplay => {
-
-    const rockBtn = inputContainer.querySelector('[data-choice="ROCK"]')
-    const paperBtn = inputContainer.querySelector('[data-choice="PAPER"]')
-    const scissorsBtn = inputContainer.querySelector('[data-choice="SCISSORS"]')
-    const btnList = [rockBtn, paperBtn, scissorsBtn]
-    
-    const inputBehaviour = () => {
-      // Get choices
-      const PLAYER = this.dataChoice.value // Get choice type
-      const AI = getAiChoice() 
-      // Update points
-      isWinningChoice(PLAYER, AI) ? playerWin() : playerLose()
-      // Update points display
-      updatePointsDisplay(getCurrentPoints)
-      if (DEV_MODE) console.log(playerChoice)
-    }
-
-    // Attach event listener
-    btnList.forEach(btn => btn.onclick = () => inputBehaviour)
+      const rockBtn = inputContainer.querySelector('[data-choice="ROCK"]')
+      const paperBtn = inputContainer.querySelector('[data-choice="PAPER"]')
+      const scissorsBtn = inputContainer.querySelector('[data-choice="SCISSORS"]')
+          
+      const inputBehaviour = choice => {
+        // Get choices
+        const PLAYER = choice // Get choice type
+        const AI = getAiChoice() 
+        // Update points
+        isWinningChoice(PLAYER, AI) ? playerWin() : playerLose()
+        // Update points display
+        updatePointsDisplay(getCurrentPoints())
+      }
+      
+      // Attach event listener
+      rockBtn.addEventListener('click', () => inputBehaviour(ROCK))
+      paperBtn.addEventListener('click', () => inputBehaviour(PAPER))
+      scissorsBtn.addEventListener('click', () => inputBehaviour(SCISSORS))
 
   } 
 
