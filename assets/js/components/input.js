@@ -1,9 +1,9 @@
 // Module for behaviour for input component
 
 // Import dependencies
-import {DEV_MODE} from "../module/constants"
-import {getAiChoice} from "../module/ai"
-import {playerWin, playerLose, isWinningChoice, getCurrentPoints,} from "../module/points"
+import {DEV_MODE} from "../module/constants.js"
+import {getAiChoice} from "../module/ai.js"
+import {playerWin, playerLose, isWinningChoice, getCurrentPoints,} from "../module/points.js"
 
 // Export IIFE
 export default (function() {

@@ -1,7 +1,7 @@
 // Module to keep track of points
 
 // Import dependencies
-import {DEV_MODE, VERSUS, WIN, LOSE, MAX_WIN} from "./constants"
+import {DEV_MODE, VERSUS, WIN, LOSE, MAX_WIN} from "./constants.js"
 
 // Export IIFE
 export default (function() {

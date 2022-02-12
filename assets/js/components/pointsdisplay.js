@@ -1,7 +1,7 @@
 // Module for points display component
 
 // Import dependencies
-import {MAX_WIN} from "../module/constants"
+import {MAX_WIN} from "../module/constants.js"
 
 // Export IIFE
 export default (function() {

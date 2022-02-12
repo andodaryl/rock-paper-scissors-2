@@ -1,7 +1,7 @@
 // Module for AI choice
 
 // Import dependencies
-import {ROCK, PAPER, SCISSORS} from "./constants"
+import {ROCK, PAPER, SCISSORS} from "./constants.js"
 
 // Export IIFE
 export default (function() {
