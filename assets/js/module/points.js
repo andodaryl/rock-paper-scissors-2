@@ -55,8 +55,8 @@ export default (function() {
   const getCurrentPoints = () => ({...currentPoints})
 
   // Check if player choice is sucessful
-  const isWinningChoice = input => {
-    result = VERSUS[input]
+  const isWinningChoice = (PLAYER, AI) => {
+    result = VERSUS[PLAYER][AI]
     switch(result) {
       case WIN:
         return true
