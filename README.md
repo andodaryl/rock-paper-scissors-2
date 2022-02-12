@@ -248,7 +248,7 @@ With the help of this [tutorial](https://dev.to/yuribenjamin/how-to-deploy-react
 5. Select the "Save" button.
 6. The website will be deployed automatically and a link to the live website will be displayed.
 
-The live page is available [here](https://andodaryl.github.io/personal-library/).
+The live page is available [here](https://andodaryl.github.io/rock-paper-scissors-2/index.html).
 
 ## Forking Github Repos
 
