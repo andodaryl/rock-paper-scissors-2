@@ -6,6 +6,7 @@ export default {
   ROCK: 'ROCK',
   PAPER: 'PAPER',
   SCISSORS: 'SCISSORS',
+  MAX_WIN: 3,
   WIN: 'WIN',
   LOSE: 'LOSE',
   VERSUS: {
