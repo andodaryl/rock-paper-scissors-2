@@ -8,7 +8,7 @@ import pointsJS from "../module/points.js"
 // Export IIFE
 export default (function() {
     // Get exports
-    const {DEV_MODE, ROCK, PAPER, SCISSORS} = constantsJS
+    const {ROCK, PAPER, SCISSORS} = constantsJS
     const {getAiChoice} = aiJS
     const {playerWin, playerLose, isWinningChoice, getCurrentPoints} = pointsJS
 
