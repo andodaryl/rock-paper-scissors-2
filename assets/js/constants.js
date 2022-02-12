@@ -2,6 +2,7 @@
 
 // Export object
 export default {
+  DEV_MODE: true,
   ROCK: 'ROCK',
   PAPER: 'PAPER',
   SCISSORS: 'SCISSORS',
