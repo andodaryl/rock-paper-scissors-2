@@ -224,6 +224,7 @@ Taken from user stories
   * Additionally, buttons are either highlighted when hovered, and or the mouse icon converts into a different pointer to indicate interactivity.
   * Game interaction is kept as simple as possible, witht he primary actions at the center of the screen for immediate access.
   * That simplicity avoids distraction and keeps the user focused with the primary use case of the web application.
+  * The app is responsive to all device screen types as depicted in the mockup at the top of this readme document.
 * Replay the activity for endless use
   * When either player or AI reaches 3 points, the game is over and a button appears at the bottom of the screen leading to the homepage (the app page).
   * This way, the player can reload the page and start the game again.
@@ -232,11 +233,13 @@ Taken from user stories
   * There are two containers which shows the player and AI choice.
   * Moreover, there is an area which provides a live update of both player and AI score.
   * There are additional prompts, such as the welcome message and the game over messages (i.e. Player Wins vs AI Wins) to depict the user's current progress.
+  * Scores can also be tracked in the title of the tab.
 * See feedback of my actions
   * Selecting an input updates the player choice input - which immediately prompts a response from the AI.
   * Selected choices are highlighted in blue to show that it has been activated.
   * Similarly, the restart button reverts in color when selected or hovered.
   * As previously described, the status section provides the player with their current game progress and player, along with AI choices are displayed live in the upper most containers.
+  * Likewise, scores and game status can be observed in tab title.
 
 ## Deployment
 
