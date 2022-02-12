@@ -1,7 +1,7 @@
 // Module to keep track of points
 
 // Import dependencies
-import {DEV_MODE, VERSUS, WIN, LOSE} from "./constants"
+import {DEV_MODE, VERSUS, WIN, LOSE, MAX_WIN} from "./constants"
 
 // Export IIFE
 export default (function() {
@@ -48,8 +48,10 @@ export default (function() {
   const currentPoints = new Data()
 
   // Points logic
-  const playerWin = () => ++currentPoints.PLAYER // Increase player points
-  const playerLose = () => ++currentPoints.AI // Increase ai points
+  // Increase player points until max win
+  const playerWin = () => currentPoints.PLAYER < MAX_WIN ? ++currentPoints.PLAYER : 'MAX REACHED' 
+  // Increase ai points until max win
+  const playerLose = () => currentPoints.AI < MAX_WIN ? ++currentPoints.AI : 'MAX REACHED'
 
   // Read only data
   const getCurrentPoints = () => ({...currentPoints})
