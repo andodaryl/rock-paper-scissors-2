@@ -29,9 +29,6 @@ export default (function () {
 
             // Display chosen node
             choiceNode.classList.remove("visually-hidden");
-
-            console.log(owner);
-            console.log(choice);
         };
         // Activate behaviour
         const gameIsNotOver = !isGameOver();
