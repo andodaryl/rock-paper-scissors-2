@@ -8,12 +8,12 @@ import pointsJS from "../module/points.js"
 // Export IIFE
 export default (function() {
     // Get exports
-    const {ROCK, PAPER, SCISSORS} = constantsJS
+    const {ROCK, PAPER, SCISSORS, TIE} = constantsJS
     const {getAiChoice} = aiJS
     const {playerWin, playerLose, isWinningChoice, getCurrentPoints} = pointsJS
 
     // Main Behaviors
-    const bindInputBehaviour = inputContainer => updatePointsDisplay => {
+    const bindInputBehaviour = inputContainer => (updatePointsDisplay, updateChoiceDisplay) => {
       const rockBtn = inputContainer.querySelector('[data-choice="ROCK"]')
       const paperBtn = inputContainer.querySelector('[data-choice="PAPER"]')
       const scissorsBtn = inputContainer.querySelector('[data-choice="SCISSORS"]')
@@ -23,7 +23,8 @@ export default (function() {
         const PLAYER = choice // Get choice type
         const AI = getAiChoice() 
         // Update points
-        isWinningChoice(PLAYER, AI) ? playerWin() : playerLose()
+        updateChoiceDisplay(PLAYER, AI)
+        if (isWinningChoice(PLAYER, AI) !== TIE) isWinningChoice(PLAYER, AI) ? playerWin() : playerLose()
         // Update points display
         updatePointsDisplay(getCurrentPoints())
       }
