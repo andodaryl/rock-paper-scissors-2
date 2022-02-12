@@ -30,6 +30,7 @@
   <main id="page-content">
     <div id="app-container" class="container-md p-5 d-flex flex-column gap-5">
       <section id="container-choice" class="d-flex justify-content-center gap-5 flex-wrap">
+        <h2 class="visually-hidden">Player and AI Choices</h2>
         <div class="card card-choice d-flex justify-content-around" data-choice="PLAYER">
           <h2 class="position-absolute top-0 ms-2 h3">Player</h2>
           <p class="text-center display-5 visually-hidden" data-choice="ROCK">
@@ -56,11 +57,12 @@
         </div>
       </section>
       <section id="container-score" class="d-flex justify-content-center">
+        <h2 class="visually-hidden">Game Status</h2>
         <p id="score-node" class="h1 text-center">Start the game!</p>
       </section>
-      </section>
       <section id="container-input" class="d-flex justify-content-center">
-        <div class="card card-input" class="d-flex flex-column">
+        <h2 class="visually-hidden">Player Input</h2>
+        <div class="d-flex flex-column card card-input">
           <p class="h2 text-center">What's your choice?</p>
           <button type="button" class="btn" data-choice="ROCK">
             <i class="far fa-hand-rock"></i> Rock
@@ -74,9 +76,11 @@
         </div>
       </section>
       <section id="container-gameover" class="d-flex justify-content-center visually-hidden">
+        <h2 class="visually-hidden">Game Over Section</h2>
         <a  href="./index.html" class=" btn btn-outline-dark" style="width: 10rem">
           <i class="bi bi-arrow-clockwise"></i> Play Again
         </a>
+      </section>
     </div>
   </main>
   <!-- Bootstrap 5 Javascript -->
