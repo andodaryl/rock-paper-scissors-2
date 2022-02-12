@@ -13,25 +13,25 @@ World's Web is an extra curricular group that wants to inspire students to take 
 
 ### Group Goals
 
-* Create the web application as an introductory device to the software development
-* The site must be interactive with easy controls
-* Accessible online at any time on any device
+* Create the web application as an introductory device to the software development.
+* The site must be interactive with easy controls.
+* Accessible online at any time on any device.
 
 ### Target Audience
 
-* New or acquainted with using websites
-* Applicable to all demographics, with a particular focus on younger students in an academic environment
-* Minimalist aesthetic
+* New or acquainted with using websites.
+* Applicable to all demographics, with a particular focus on younger students in an academic environment.
+* Minimalist aesthetic.
 
 ## User Experience and Design
 
 ### User Stories
 As a user of this web application game, I want to...
 
-* Be able to use the controls easily
-* Replay the activity for endless use
-* Keep track of my score
-* See feedback of my actions
+* Be able to use the controls easily.
+* Replay the activity for endless use.
+* Keep track of my score.
+* See feedback of my actions.
 
 ### Wireframes
 
@@ -171,7 +171,7 @@ Components
 
 [W3C HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fandodaryl.github.io%2Frock-paper-scissors-2%2Findex.html)
 
-No HTML errors - click the link to run validator
+No HTML errors - click the link to run validator.
 
 ![W3C HTML](./assets/dev/validate-html.png "W3C HTML")
 
@@ -219,22 +219,22 @@ There is one warning however, regarding redundant links, which is due to logo li
 
 Taken from user stories
 
-* Be able to use the controls easily
+* Be able to use the controls easily:
   * Screen buttons and links are tab focusable which means the user can easily control the gaming using the TAB key to traverse down the menu, and SHIFT = TAB keys to traverse up the menu - highlighted buttons or links can then be activated using the SPACE or ENTER key.
   * Additionally, buttons are either highlighted when hovered, and or the mouse icon converts into a different pointer to indicate interactivity.
   * Game interaction is kept as simple as possible, witht he primary actions at the center of the screen for immediate access.
   * That simplicity avoids distraction and keeps the user focused with the primary use case of the web application.
   * The app is responsive to all device screen types as depicted in the mockup at the top of this readme document.
-* Replay the activity for endless use
+* Replay the activity for endless use:
   * When either player or AI reaches 3 points, the game is over and a button appears at the bottom of the screen leading to the homepage (the app page).
   * This way, the player can reload the page and start the game again.
   * Alternatively users can activate the logo to reload the app page.
-* Keep track of my score
+* Keep track of my score:
   * There are two containers which shows the player and AI choice.
   * Moreover, there is an area which provides a live update of both player and AI score.
   * There are additional prompts, such as the welcome message and the game over messages (i.e. Player Wins vs AI Wins) to depict the user's current progress.
   * Scores can also be tracked in the title of the tab.
-* See feedback of my actions
+* See feedback of my actions:
   * Selecting an input updates the player choice input - which immediately prompts a response from the AI.
   * Selected choices are highlighted in blue to show that it has been activated.
   * Similarly, the restart button reverts in color when selected or hovered.
