@@ -1,0 +1,18 @@
+:root {
+  /* Variables */
+  /* card-choice */
+  --card-choice-length: 15rem;
+}
+
+/* Containers */
+/* card-choice */
+.card-choice {
+  height: var(--card-choice-length);
+  width: var(--card-choice-length);
+}
+/* card-input */ 
+.card-input {
+  height: 15rem;
+  width: 30rem;
+  border: none;
+}

@@ -36,15 +36,35 @@
       </nav>
     </div>
   </header>
-  <main id="page-content"> 
-    <section id="container-choice"></section>
-    <section id="container-input"></section>
-    <section id="container-score"></section>
+  <main id="page-content">
+    <div id="app-container" class="container-md p-5 d-flex flex-column gap-5">
+      <section id="container-choice" class="d-flex justify-content-center gap-5 flex-wrap">
+        <div id="ai-choice" class="card card-choice">
+          <h2 class="position-absolute top-0 ms-2 h3">AI</p>
+        </div>
+        <div id="player-choice" class="card card-choice">
+          <h2 class="position-absolute top-0 ms-2 h3">Player</p>
+        </div>
+      </section>
+      <section id="container-score" class="d-flex justify-content-center">
+        <p id="score-node" class="h1 text-center">XX:XX</p>
+      </section>
+      <section id="container-input" class="d-flex justify-content-center">
+        <div class="card card-input" class="d-flex flex-column">
+          <p class="h2 text-center">What's your choice?</p>
+          <button type="button" class="btn"><i class="far fa-hand-rock" data-choice="ROCK"></i> Rock</button>
+          <button type="button" class="btn"><i class="far fa-hand-paper" data-choice="PAPER"></i> Paper</button>
+          <button type="button" class="btn"><i class="far fa-hand-scissors" data-choice="SCISSORS"></i> Scissors</button>
+        </div>
+      </section>
+    </div>
   </main>
   <!-- Bootstrap 5 Javascript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <!-- Font Awesome 5 Javascript -->
   <script src="https://kit.fontawesome.com/acea76301a.js" crossorigin="anonymous"></script>
+  <!-- Custom Javascript -->
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>
