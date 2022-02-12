@@ -14,11 +14,12 @@ const {bindChoiceDisplayBehaviour} = choicedisplayJS
 // DOM Elements
 const title = document.getElementsByTagName('title')[0]
 const node = document.getElementById('score-node')
+const gameoverContainer = document.getElementById('container-gameover')
 const inputContainer = document.getElementById('container-input')
 const choiceContainer = document.getElementById('container-choice')
 
 // Bind Behaviours to DOM Elements
-const updatePointsDisplay = bindPointsDisplayBehaviour(title, node)
+const updatePointsDisplay = bindPointsDisplayBehaviour(title, node, gameoverContainer)
 const updateChoiceDisplay = bindChoiceDisplayBehaviour(choiceContainer)
 const activateInputBehaviour = bindInputBehaviour(inputContainer)
 

@@ -2,13 +2,15 @@
 
 // Import dependencies
 import constantsJS from "../module/constants.js"
+import pointsJS from "../module/points.js"
 
 // Export IIFE
 export default (function() {
   // Get exports
   const {MAX_WIN} = constantsJS
+  const {isGameOver} = pointsJS
 
-  const bindPointsDisplayBehaviour = (title, node) => (currentPoints) => {
+  const bindPointsDisplayBehaviour = (title, node, gameoverContainer) => (currentPoints) => {
     // Safe data
     const safePoints = currentPoints || {}
     const PLAYER = safePoints.PLAYER || 0
@@ -26,6 +28,8 @@ export default (function() {
       title.innerText = `${PLAYER}:${AI} - Rock Paper Scissors` // Update Title
       node.innerText = `${PLAYER}:${AI}` // Update Score Node
     }
+    // Show restart button
+    if (isGameOver()) gameoverContainer.classList.remove('visually-hidden')
   }
   // API
   return {
